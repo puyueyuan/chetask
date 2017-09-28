@@ -45,7 +45,7 @@ PRIMARY KEY \(\`id\`\)
 
 7. created\_at 为任务创建时间。
 
-8. id为任务表task—\_id
+8. id为任务表task\_id.
 
 ### 2.任务详情表
 
@@ -74,4 +74,15 @@ PRIMARY KEY \(\`id\`\),
 KEY \`idx\_taskid\_status\_head\_verified\` \(\`verified\_type\`,\`head\_level\`,\`status\`,\`task\_id\`,\`check\_status\`\) USING BTREE
 
 \) ENGINE=InnoDB AUTO\_INCREMENT=5016 DEFAULT CHARSET=utf8 COMMENT='?????-????????';
+
+表结构说明：
+  1. mid为导入微博id。
+  2. ctime为创建时间。
+  3. uid为用户id。
+  4. verified_type 为用户认证类别 0-7。
+  5. head_level 为头部用户级别。
+  6. status为微博状态 用户筛选。不实时更新只有第一次操作；
+  7. task_id为任务id，关联任务表id。
+  8. check_status 为是否审核状态。 
+
 
