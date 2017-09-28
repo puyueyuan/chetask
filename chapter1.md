@@ -45,35 +45,33 @@ PRIMARY KEY \(\`id\`\)
 
 7. created\_at 为任务创建时间。
 
-
+8. id为任务表task—\_id
 
 ### 2.任务详情表
 
 CREATE TABLE \`checktask\_new\_details\` \(
 
-  \`id\` int\(10\) unsigned NOT NULL AUTO\_INCREMENT COMMENT '??id',
+\`id\` int\(10\) unsigned NOT NULL AUTO\_INCREMENT COMMENT '??id',
 
-  \`mid\` bigint\(32\) unsigned NOT NULL DEFAULT '0' COMMENT '????id',
+\`mid\` bigint\(32\) unsigned NOT NULL DEFAULT '0' COMMENT '????id',
 
-  \`ctime\` timestamp NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '??????',
+\`ctime\` timestamp NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '??????',
 
-  \`uid\` bigint\(20\) unsigned NOT NULL DEFAULT '0' COMMENT '??UID',
+\`uid\` bigint\(20\) unsigned NOT NULL DEFAULT '0' COMMENT '??UID',
 
-  \`verified\_type\` tinyint\(3\) NOT NULL DEFAULT '-1' COMMENT '????',
+\`verified\_type\` tinyint\(3\) NOT NULL DEFAULT '-1' COMMENT '????',
 
-  \`head\_level\` tinyint\(3\) unsigned NOT NULL DEFAULT '0' COMMENT '????',
+\`head\_level\` tinyint\(3\) unsigned NOT NULL DEFAULT '0' COMMENT '????',
 
-  \`status\` smallint\(5\) unsigned NOT NULL DEFAULT '0' COMMENT '????:0???,12????...',
+\`status\` smallint\(5\) unsigned NOT NULL DEFAULT '0' COMMENT '????:0???,12????...',
 
-  \`task\_id\` bigint\(10\) NOT NULL DEFAULT '0',
+\`task\_id\` bigint\(10\) NOT NULL DEFAULT '0',
 
-  \`check\_status\` tinyint\(4\) NOT NULL DEFAULT '0',
+\`check\_status\` tinyint\(4\) NOT NULL DEFAULT '0',
 
-  PRIMARY KEY \(\`id\`\),
+PRIMARY KEY \(\`id\`\),
 
-  KEY \`idx\_taskid\_status\_head\_verified\` \(\`verified\_type\`,\`head\_level\`,\`status\`,\`task\_id\`,\`check\_status\`\) USING BTREE
+KEY \`idx\_taskid\_status\_head\_verified\` \(\`verified\_type\`,\`head\_level\`,\`status\`,\`task\_id\`,\`check\_status\`\) USING BTREE
 
 \) ENGINE=InnoDB AUTO\_INCREMENT=5016 DEFAULT CHARSET=utf8 COMMENT='?????-????????';
-
-
 
